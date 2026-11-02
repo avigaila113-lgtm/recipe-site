@@ -1,0 +1,124 @@
+*{box-sizing: border-box}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 1rem; 
+}
+
+form{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 1.5rem; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.field > label, 
+.row .field-group > label, 
+legend {
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem;
+}
+
+.row .field-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+input:not([type="checkbox"], [type="radio"]), select, textarea {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+fieldset {
+    border: 1px solid #ccc; 
+    border-radius: 6px;
+}
+
+input:not([type="checkbox"], [type="radio"]):focus, select:focus, textarea:focus {   
+    border-color: #2e5597; 
+    outline: none;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #2e5597;
+}
+
+button {
+    background-color: #2e5597; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 6px; 
+    padding: 0 1rem; 
+    font-size: 1rem; 
+    min-height: 2.75rem; 
+    cursor: pointer; 
+    width: 100%;
+}
+
+button:hover {
+    background-color: #1f3b6c; 
+}
+
+@media (width >= 700px) {
+    form {
+        padding: 2rem;
+    }
+    .row {
+        flex-direction: row;
+    }
+    .row .field-group {
+        flex: 1;
+    }
+    button { 
+        width: auto; 
+        align-self: center; 
+    }
+}
+/* בעיה ראשונה: שלושת השדות הקטנים  הנמצאים בתוך המחלקה .row נשארים צמודים או מתנהגים כטור אחד בצורה שאינה נוחה למסך צר, או לחלופין המרווחים והפדינג הקבועים (בפיקסלים) אינם מתאימים בגודלם באופן יחסי למסכים קטנים.
+בעיה שניה: הריפוד (padding) הקבוע של הטופס והשדות בפיקסלים קשיחים אינו מתגמש, מה שגורם לכך שהתוכן מרגיש צפוף או לחלופין יוצר גלישה אופקית/חוסר פרופורציה בנצפות במסך ברוחב כה צר. */
+
+/*מענה על סעיף 5 בתרגיל :
+  שלושת השדות הקטנים קופצים לשורה אחת בדיוק ברוחב 700 פיקסלים .*/
+
+/* מענה על חלק ד' סעיף 1 ו-2 :
+  1. אחרי לחיצה על שמירת המתכון נוספו לכתובת הדף (URL) כל נתוני הטופס שהוזנו.
+  2. כאשר מנסים לשלוח בלי למלא שדה חובה, הדפדפן הוא זה שהציג את הודעת האזהרה המובנית שלו (שדורשת למלא את השדה). */
+/* 
+  שאלה א': מה ההבדל בין name ל-id, ולמה לכל כפתורי הרדיו של סוג המנה יש אותו name?
+  תשובה: id הוא מזהה ייחודי שחייב להיות שונה לכל אלמנט בדף ואילו name משייך את השדה לקבוצה מסוימת לכפתורי רדיו יש אותו name כדי ליצור קבוצה שבה אפשר לבחור רק אפשרות אחת מתוכם .
+
+  שאלה ב': למה כתבנו את העיצוב של המסך הקטן קודם, והשתמשנו בתנאי ב-Media Query? מה היה קורה אם היינו כותבים את ה-Media Query לפני הכללים הרגילים?
+  תשובה: כתיבת העיצוב של המסך הקטן קודם  נחשבת לגישה יעילה וסטנדרטית, כך שהמסכים הקטנים מקבלים את הבסיס. אם היינו כותבים את ה-Media Query לפני הכללים הרגילים, הדפדפן היה דורס את העיצוב בגלל סדר הקסקייד וההגדרות של המסך הרחב היו מוחלפות מיד על ידי הכללים הרגילים.
+
+  שאלה ג': מה השתנה בכתובת הדף אחרי הלחיצה על שליחה, ומה זה מלמד על התכונה name?
+  תשובה: בשורת הכתובת מופיעים פרטי הטופס . זה מלמד שהתכונה name משמשת כמפתח  לשליחת הנתונים לשרת .
+*/
