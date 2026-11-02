@@ -1,0 +1,74 @@
+
+ body{
+    color: darkgray;
+
+  }
+  h2{
+    color:darkorchid ;
+  }       
+  #recipe-title {
+          font-size: 40px;
+          color:  darkmagenta;
+        }
+         .highlight {
+            background-color: yellow;
+        }
+        .intro{
+          color: blueviolet; 
+           font-size: 20;
+        }
+        .block {
+    background-color: white;
+    width: 700px;
+    box-shadow: 0 2px 8px gray;
+}
+ #main-image{
+width: 400;
+    box-shadow: 0 2px 6px gray;
+ }
+#info-table{
+    width: 100%;
+}
+.side-image{
+    width: 200px;
+    height: 200px;
+}
+#nav a:hover {
+    color: darkred;
+}
+.block:hover{
+     box-shadow: 0 6px 20px gray;
+}
+.ingredients-list >li:first-child{
+    color: brown;
+}
+.steps-list li:last-child{
+    color: palevioletred;
+}
+tbody tr:hover{
+    color: blue;
+}
+.ingredients-list li::before {
+    content: "✔ ";
+    color: green;
+}
+h2::after{
+   content: "👆🏻";
+    color: palevioletred;  
+}
+#page-footer p::before{
+    content: "@";
+    color: blueviolet;   
+}
+.container{
+    width: 900px;
+}
+/* תשובה א: עדיף לכתוב CLASS מכיון שככה כותבים את כל ההגדות פעם אחת ולא חוזרים עליהם חמישה פעמים 
+ID נועד לאלמנט ספציפי בעוד שCLASS נועדת לחלקי עיצוב משותפים
+תשובה ב: התמונה התעותה כי נקבעו לה רוחב וגובה קבועים שלא תואמים את היחס המקורי שלה 
+הפתרון לכתוב רק רוחב או רק גובה ולא שניהם ביחד */
+
+
+
+
+

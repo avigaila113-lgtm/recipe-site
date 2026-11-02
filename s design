@@ -1,0 +1,61 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 76b3768..8310aee 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -4,12 +4,14 @@[m
+ <head>[m
+   <meta charset="UTF-8">[m
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[31m-  <title>המתכון של אביגיל אברהם </title>[m
+[32m+[m[32m  <title id="recipe-title">המתכון של אביגיל אברהם </title>[m
+[32m+[m[32m  <link rel="stylesheet" href="style.css">[m
+ </head>[m
+ [m
+ <body>[m
+[32m+[m[32m  <div class="container">[m
+   <div id="top">[m
+[31m-    <h1 id="recipe-title" style="color:darkred">עוגת שוקולד</h1>[m
+[32m+[m[32m    <h1 id="recipe-title" >עוגת שוקולד</h1>[m
+     <ul id="nav">[m
+       <li><a href="#ingredients">מצרכים</a></li>[m
+       <li><a href="#steps">אופן ההכנה</a></li>[m
+[36m@@ -17,15 +19,15 @@[m
+       <li><a href="#tips">טיפים</a></li>[m
+     </ul>[m
+     <p class="intro">[m
+[31m-      עוגת שוקולד <b>עסיסית</b> <span style="background-color: yellow;" מתערובת מוכנה של אסם>ומהירה</span><br />[m
+[32m+[m[32m      עוגת שוקולד <b>עסיסית</b> <span  מתערובת מוכנה של אסם>ומהירה</span><br />[m
+       ציפוי גנאש עשיר המעניק לעוגה <span class="highlight">טעם נפלא</span>[m
+     </p>[m
+     <img src="images/צילום מסך 2026-09-08 191549.png" alt="עוגת שוקולד עסיסית" title="עוגת שוקולד לכל המשפחה"[m
+       width="400" id="main-image">[m
+   </div>[m
+   <div class="block" id="about">[m
+[31m-    <h2> מעט על המתכון</h2>[m
+[31m-    <p style="font-size: 20px;"> עוגת שוקולד רכה ואוורירית עם ציפוי גנאש שוקולד עשיר ומתוק <br />מתכון פשוט ומהיר המבוסס[m
+[32m+[m[32m    <h2 > מעט על המתכון</h2>[m
+[32m+[m[32m    <p > עוגת שוקולד רכה ואוורירית עם ציפוי גנאש שוקולד עשיר ומתוק <br />מתכון פשוט ומהיר המבוסס[m
+       על תערובת מוכנה</p>[m
+     <h3>המתכון הובא </h3>[m
+     <p> מאתר בישולים מבית אסם</p>[m
+[36m@@ -33,10 +35,10 @@[m
+     <p> בימי הולדת, במסיבות וכשרוצים קינוח שוקולדי מהיר</p>[m
+     <img[m
+       src="https://www.bishulim.co.il/sites/default/files/styles/home_stage_1500_700/public/srh_recipes/f5a93c6222ba7a4c7d1d4b2167b8f8be.jpg?h=54443d3b&itok=fCUERCmz"[m
+[31m-      width="400" alt="עוגת שוקולד" class="side-image">[m
+[32m+[m[32m      alt="עוגת שוקולד" class="side-image">[m
+   </div>[m
+   <div class="block" id="ingredients">[m
+[31m-    <h2> מצרכים</h2>[m
+[32m+[m[32m    <h2 > מצרכים</h2>[m
+ [m
+     <ul class="ingredients-list">[m
+       <li> 1 חבילה אסם תערובת לעוגת שוקולד ללג</li>[m
+[36m@@ -131,6 +133,7 @@[m
+   <div id="page-footer">[m
+     <p> אביגיל אברהם כיתה י"ג 5 , תאריך הגשה כ"ד תשרי.</p>[m
+   </div>[m
+[32m+[m[32m  </div>[m
+ </body>[m
+ [m
+ </html>[m
